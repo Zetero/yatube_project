@@ -5,7 +5,8 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Главная страничка")
+    template = 'posts/index.html'
+    return render(request, template)
 
 
 def group_posts(request, slug):
